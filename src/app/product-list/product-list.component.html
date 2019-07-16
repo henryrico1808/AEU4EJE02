@@ -8,8 +8,14 @@
       {{prod.name}}
     </a>
   </h3>
+  <p *ngIf=prod.img>
+    <img src="{{prod.img}}" alt="" width=300 height="400">
+  </p>
   <p *ngIf=prod.description>
-    Descripción: {{prod.description}} 
+      Descripción: {{prod.description}} 
+    </p>
+  <p *ngIf=prod.rank>
+    rank: {{prod.rank}} 
   </p>
   <button >
     Compartir
