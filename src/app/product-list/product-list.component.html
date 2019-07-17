@@ -1,23 +1,18 @@
-<h2>POST </h2>
 
-<div *ngFor="let prod of products; index as id"> 
-  <h3>
-    <a [title]="'Detalles '+prod.name"
-        [routerLink]="['/products', id]"
-    > 
-      {{prod.name}}
-    </a>
-  </h3>
-  <p *ngIf=prod.img>
+<h2 align="center">POST </h2>
+<div *ngFor="let prod of products;" align="center"> 
+    <h3>
+      <a href="">{{prod.name}}</a>
+    </h3>
     <img src="{{prod.img}}" alt="" width=300 height="400">
-  </p>
-  <p *ngIf=prod.description>
-      Descripción: {{prod.description}} 
-    </p>
-  <p *ngIf=prod.rank>
-    rank: {{prod.rank}} 
-  </p>
-  <button >
-    Compartir
-  </button> 
+
+    <p><b>Sinopsis:</b></p>
+    <p>{{prod.description}} </p>
+    
+    <p>Votes: </p>
+    <div style="display: inline-block; width: 20px;" *ngFor="let i of prod.rank">
+        <i class="material-icons" style="color: chartreuse">star_rate</i>
+    </div>
+    <!--  -->
+    <br><button >Share</button> <hr>
 </div>
